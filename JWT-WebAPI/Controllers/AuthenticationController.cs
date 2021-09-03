@@ -27,5 +27,11 @@ namespace JWT_WebAPI.Controllers
             return Ok(user); 
 
         }
+
+        //branch 2
+        public IActionResult Put([FromBody]User model)
+        {
+            return Ok(model);
+        }
     }
 }
