@@ -19,13 +19,12 @@ using JWT_WebAPI.Services;
 
 namespace JWT_WebAPI
 {
-    //this is master branch
-    
+    //this is master branch    
     public class Startup
-    {
-        
+    {        
         //branch 1 changes
         // branch 1 changes 2
+        // branch 2 change -1
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
