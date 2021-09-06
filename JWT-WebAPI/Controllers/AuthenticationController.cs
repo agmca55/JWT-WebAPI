@@ -12,10 +12,9 @@ namespace JWT_WebAPI.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class AuthenticationController : ControllerBase
-    {   
-        //change 1 branch 1
+    {          
         private IAuthenticateService _authenticateService;
-        private IAuthenticateService _tempBranch1;
+        private IAuthenticateService _tempBranch1; //change 1 branch 1
         public AuthenticationController(IAuthenticateService authenticateService)
         {
             _authenticateService = authenticateService;
@@ -23,14 +22,11 @@ namespace JWT_WebAPI.Controllers
         public IActionResult Post([FromBody]User model)
         {
             var user = _authenticateService.Authenticate(model.UserName, model.Password);
-
             if (user == null) return BadRequest(new {message="Username or password is incorrect"});
-
             return Ok(user); 
-
         }
 
-        //branch 2
+        //branch 1 new update
         public IActionResult Put([FromBody]User model)
         {
             return Ok(model);
