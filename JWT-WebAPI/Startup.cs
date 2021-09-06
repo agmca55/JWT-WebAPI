@@ -22,10 +22,12 @@ namespace JWT_WebAPI
     public class Startup
     {     
         //this is branch 1 change
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
+        //This is branch 2 changes
 
         public IConfiguration Configuration { get; }
 
