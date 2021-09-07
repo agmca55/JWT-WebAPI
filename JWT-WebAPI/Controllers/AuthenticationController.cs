@@ -9,6 +9,7 @@ using JWT_WebAPI.Models;
 //branch 1 changes
 namespace JWT_WebAPI.Controllers
 {
+   //this is branch 2 changes-new
     [Route("api/[controller]")]
     [ApiController]
     public class AuthenticationController : ControllerBase
@@ -28,6 +29,12 @@ namespace JWT_WebAPI.Controllers
         }
 
         //branch 1 new update
+        public IActionResult Put([FromBody]User model)
+        {
+            return Ok(model);
+        }
+
+        //branch 2
         public IActionResult Put([FromBody]User model)
         {
             return Ok(model);
