@@ -9,13 +9,12 @@ using JWT_WebAPI.Models;
 
 namespace JWT_WebAPI.Controllers
 {
-   //this is branch 2 changes-new
-   //1234 from branch 2
     [Route("api/[controller]")]
     [ApiController]
     public class AuthenticationController : ControllerBase
-    {
+    { 
         private IAuthenticateService _authenticateService;
+        private IAuthenticateService _tempBranch1;
         public AuthenticationController(IAuthenticateService authenticateService)
         {
             _authenticateService = authenticateService;
@@ -29,8 +28,7 @@ namespace JWT_WebAPI.Controllers
             return Ok(user); 
 
         }
-
-        //branch 2
+  
         public IActionResult Put([FromBody]User model)
         {
             return Ok(model);
