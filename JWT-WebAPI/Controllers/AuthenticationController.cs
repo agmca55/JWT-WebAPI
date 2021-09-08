@@ -6,22 +6,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using JWT_WebAPI.Services;
 using JWT_WebAPI.Models;
-//branch 1 changes
+
 namespace JWT_WebAPI.Controllers
 {
-   //this is branch 2 changes-new
-   //anil
-   //anil 2
     [Route("api/[controller]")]
     [ApiController]
     public class AuthenticationController : ControllerBase
     {          
         private IAuthenticateService _authenticateService;
-        private IAuthenticateService _tempBranch1; //change 1 branch 1
+        private IAuthenticateService _tempBranch1; 
         public AuthenticationController(IAuthenticateService authenticateService)
         {
-            _authenticateService = authenticateService;
-            ///hhhhhhhh
+            _authenticateService = authenticateService;   
         }
         public IActionResult Post([FromBody]User model)
         {
@@ -29,17 +25,10 @@ namespace JWT_WebAPI.Controllers
             if (user == null) return BadRequest(new {message="Username or password is incorrect"});
             return Ok(user); 
         }
-
-        //branch 1 new update
         public IActionResult Put([FromBody]User model)
         {
             return Ok(model);
         }
-
-        //branch 2
-        public IActionResult Put([FromBody]User model)
-        {
-            return Ok(model);
-        }
+       
     }
 }
